@@ -13,20 +13,15 @@ import java.time.LocalDate;
 @RestController
 public class ControladorREST {
     
-    /**@GetMapping
-    
-    */
+    /**
+    @GetMapping
     public String comienzo (){
         return "Hola Mundo";
     }
-    /**Prueba de integracion Fecha
-    @GetMapping("/fecha")
-    public LocalDate fecha() {
-        return LocalDate.now();
-    }
     */
     
-    /**Prueba de integracion Calculadora
+    /**
+    //Prueba de integracion Calculadora
     @GetMapping("/sumar")
     public Resultado sumar(@RequestParam int a, @RequestParam int b) {
         int suma = a + b;
@@ -34,6 +29,7 @@ public class ControladorREST {
     }
 
     public static class Resultado {
+
         private int resultado;
 
         public Resultado(int resultado) {
@@ -48,6 +44,12 @@ public class ControladorREST {
             this.resultado = resultado;
         }
     }
-   */
+    */
     
+    
+    //Prueba de integracion Fecha
+    @GetMapping("/fecha")
+    public LocalDate fecha() {
+        return LocalDate.now();
+    }
 }
